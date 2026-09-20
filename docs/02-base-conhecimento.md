@@ -27,18 +27,10 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ## Estratégia de Integração
 
 ### Como os dados são carregados?
-> Descreva como seu agente acessa a base de conhecimento.
-
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+> Os dados estruturados (JSON) e tabulares (CSV) são lidos localmente na inicialização do script através de uma função auxiliar (carregar_dados()). Os ficheiros JSON são lidos diretamente e os ficheiros CSV são processados via biblioteca Pandas e convertidos para representação textual em tabela (to_string()).
 
 ### Como os dados são usados no prompt?
-> Os dados vão no system prompt? São consultados dinamicamente?
-
-[Os dados estruturados (JSON) e tabulares (CSV) são lidos localmente na inicialização do script através de uma função auxiliar (carregar_dados()).
-
-Os ficheiros JSON (perfil_investidor.json e produtos_financeiros.json) são lidos e mantidos como estruturas de texto/JSON formatadas.
-
-Os ficheiros CSV (transacoes.csv e historico_atendimento.csv) são processados via biblioteca Pandas e convertidos para representação textual em tabela (to_string()), garantindo leitura leve e direta.i]
+> Os dados são injetados diretamente no system_instruction (System Prompt) da API do Gemini (gemini-3.6-flash). Dessa forma, a base de conhecimento do cliente e os produtos disponíveis ficam na memória de contexto do modelo desde a primeira mensagem.
 
 ---
 
