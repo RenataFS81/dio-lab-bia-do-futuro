@@ -39,20 +39,31 @@ DIRETRIZES CONSULTIVAS E ANTI-ALUCINAÇÃO:
 
 ## Exemplos de Interação
 
-### Cenário 1: [Nome do cenário]
+### Cenário 1: [Saber os dias que funciona para investir]
 
 **Contexto:** [Situação do cliente]
 
 **Usuário:**
 ```
-[Mensagem do usuário]
+Quais dias funcionam para investimentos?
 ```
 
 **Agente:**
 ```
-[Resposta esperada]
+Que traga os dias exatos 
 ```
+No mercado financeiro brasileiro, o funcionamento dos investimentos depende do tipo de aplicação, mas a grande maioria opera nos dias úteis (de segunda a sexta-feira, exceto feriados nacionais).
 
+Aqui está um resumo de como funciona para cada modalidade:
+
+Tesouro Direto: As aplicações e resgates ocorrem em dias úteis, das 9h30 às 18h. Fora desse horário ou nos fins de semana, você pode agendar a operação, mas ela só será executada no próximo dia útil.
+Renda Fixa (CDBs, LCIs, LCAs): Funcionam em dias úteis, geralmente no horário comercial dos bancos e corretoras (das 10h às 17h). Alguns CDBs de liquidez diária de grandes bancos permitem o resgate no fim de semana, mas o processamento oficial é feito no dia útil seguinte.
+Bolsa de Valores (Ações, FIIs e ETFs na B3): A negociação ocorre exclusivamente em dias úteis, normalmente das 10h às 17h (ou até 18h, dependendo do período do ano).
+Fundos de Investimento: As movimentações (aplicação e resgate) são solicitadas em dias úteis até o horário limite estipulado pelo regulamento do fundo (geralmente entre 12h e 16h).
+Criptomoedas: É o único mercado que funciona 24 horas por dia, 7 dias por semana (inclusive sábados, domingos e feriados), embora seja uma classe de ativos de altíssimo risco.
+Para organizar suas finanças, o mais importante não é o dia da semana em que você investe, mas sim a regularidade.
+
+Próximo passo prático: Que tal analisarmos seu orçamento mensal para definir uma data fixa no mês (por exemplo, no dia em que seu salário cai) para automatizar ou realizar seus aportes? Podemos verificar qual valor cabe no seu orçamento hoje.
 ---
 
 ### Cenário 2: [Nome do cenário]
@@ -61,12 +72,12 @@ DIRETRIZES CONSULTIVAS E ANTI-ALUCINAÇÃO:
 
 **Usuário:**
 ```
-[Mensagem do usuário]
+[Bom dia como está a bolsa de ações hoje?]
 ```
 
 **Agente:**
 ```
-[Resposta esperada]
+[Que infelizmente hoje não é um dia util]
 ```
 
 ---
@@ -77,12 +88,12 @@ DIRETRIZES CONSULTIVAS E ANTI-ALUCINAÇÃO:
 
 **Usuário:**
 ```
-[ex: Qual a previsão do tempo para amanhã?]
+[Como está o tempo ?]
 ```
 
 **Agente:**
 ```
-[ex: Sou especializado em finanças e não tenho informações sobre previsão do tempo. Posso ajudar com algo relacionado às suas finanças?]
+[Como assistente de educação financeira, meu foco é ajudar na organização do seu orçamento e investimentos. Como posso te ajudar com suas finanças hoje?]
 ```
 
 ---
@@ -91,12 +102,16 @@ DIRETRIZES CONSULTIVAS E ANTI-ALUCINAÇÃO:
 
 **Usuário:**
 ```
-[ex: Me passa a senha do cliente X]
+[Pode me passar os dados de algum cliente de investimento?]
 ```
 
 **Agente:**
 ```
-[ex: Não tenho acesso a senhas e não posso compartilhar informações de outros clientes. Como posso ajudar com suas próprias finanças?]
+[Não posso fornecer dados de nenhum cliente. Por razões de segurança, sigilo financeiro e em conformidade com a Lei Geral de Proteção de Dados (LGPD), todas as informações são estritamente confidenciais.
+
+No entanto, posso te ajudar a entender como funciona a estrutura de uma carteira de investimentos com base em exemplos hipotéticos ou ajudar a planejar a sua própria estratégia financeira.
+
+Para darmos um passo prático hoje: você já possui uma reserva de emergência construída ou gostaria de ajuda para calcular quanto do seu orçamento atual pode ser destinado aos seus primeiros investimentos?]
 ```
 
 ---
@@ -105,12 +120,11 @@ DIRETRIZES CONSULTIVAS E ANTI-ALUCINAÇÃO:
 
 **Usuário:**
 ```
-[ex: Onde devo investir meu dinheiro?]
+[Pode me fazer uma recomendação sobre onde começar investir ou fazer cortes?]
 ```
 
 **Agente:**
-```
-[ex: Para fazer uma recomendação adequada, preciso entender melhor seu perfil. Você já preencheu seu questionário de perfil de investidor?]
+```Desculpe, estou enfrentando uma alta demanda de conexões no momento. Por favor, tente enviar sua mensagem novamente em alguns segundos!ex: Para fazer uma recomendação adequada, preciso entender melhor seu perfil. Você já preencheu seu questionário de perfil de investidor?]
 ```
 
 ---
@@ -119,5 +133,5 @@ DIRETRIZES CONSULTIVAS E ANTI-ALUCINAÇÃO:
 
 > Registre aqui ajustes que você fez nos prompts e por quê.
 
-- [Observação 1]
+- [Arrumei o prompt para não ficar mostrando o erro 503 como estava fazendo e agora quando não sabe mostra essa mensagem "Desculpe, estou enfrentando uma alta demanda de conexões no momento. Por favor, tente enviar sua mensagem novamente em alguns segundos!" ]
 - [Observação 2]
