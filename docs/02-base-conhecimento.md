@@ -20,7 +20,7 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-[Sua descrição aqui]
+[Não modifiquei a estrutura base, utilizei os arquivos indicados para o desafio (perfil_investidor.json, produtos_financeiros.json, transacoes.csv e historico_atendimento.csv).]
 
 ---
 
@@ -34,7 +34,11 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+[Os dados estruturados (JSON) e tabulares (CSV) são lidos localmente na inicialização do script através de uma função auxiliar (carregar_dados()).
+
+Os ficheiros JSON (perfil_investidor.json e produtos_financeiros.json) são lidos e mantidos como estruturas de texto/JSON formatadas.
+
+Os ficheiros CSV (transacoes.csv e historico_atendimento.csv) são processados via biblioteca Pandas e convertidos para representação textual em tabela (to_string()), garantindo leitura leve e direta.i]
 
 ---
 
@@ -43,13 +47,39 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 > Mostre um exemplo de como os dados são formatados para o agente.
 
 ```
-Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
+Você é o "ReEduca Finanças", um agente de IA especialista em consultoria e educação financeira no Brasil.
 
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
-...
+DADOS DO CLIENTE E DO SISTEMA:
+- PERFIL DO CLIENTE:
+{
+  "nome": "João Silva",
+  "idade": 32,
+  "profissao": "Analista de Sistemas",
+  "renda_mensal": 5000.0,
+  "perfil_investidor": "moderado",
+  "objetivo_principal": "Construir reserva de emergência"
+}
+
+- PRODUTOS FINANCEIROS:
+[
+  {
+    "nome": "Tesouro Selic",
+    "categoria": "renda_fixa",
+    "risco": "baixo",
+    "rentabilidade": "100% da Selic"
+  }
+]
+
+- TRANSAÇÕES REGISTRADAS:
+id_transacao  data       categoria     descricao            valor_brl  tipo
+1001          2026-09-01 Alimentação   Supermercado         450.0      Saída
+1003          2026-09-05 Renda         Salário / Proventos  3500.0     Entrada
+
+- HISTÓRICO DE ATENDIMENTOS:
+id_atendimento data       categoria     resumo_atendimento                             status
+1              2026-08-10 Dívidas       Cliente solicitou plano de renegociação        Concluído
+
+DIRETRIZES:
+1. Responda com base nos dados do cliente acima.
+2. Se o usuário perguntar sobre os gastos do João ou maiores despesas, analise a lista de transações e detalhe os valores.
 ```
