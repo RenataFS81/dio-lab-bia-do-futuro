@@ -124,10 +124,11 @@ Para darmos um passo prático hoje: você já possui uma reserva de emergência 
 ```
 
 **Agente:**
-```Desculpe, estou enfrentando uma alta demanda de conexões no momento. Por favor, tente enviar sua mensagem novamente em alguns segundos!ex: Para fazer uma recomendação adequada, preciso entender melhor seu perfil. Você já preencheu seu questionário de perfil de investidor?]
+```
+Desculpe, estou enfrentando uma alta demanda de conexões no momento. Por favor, tente enviar sua mensagem novamente em alguns segundos!ex: Para fazer uma recomendação adequada, preciso entender melhor seu perfil. Você já preencheu seu questionário de perfil de investidor?]
+---
 ```
 
----
 
 ## Observações e Aprendizados
 
