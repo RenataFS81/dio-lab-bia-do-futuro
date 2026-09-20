@@ -66,4 +66,4 @@ A avaliação do agente **ReEduca Finanças** foi realizada através de duas abo
 
 * **Modelo Utilizado:** Google Gemini API (gemini-2.5-flash, gemini-1.5-flash, gemini-2.0-flash, gemini-1.5-pro).
 * **Tempo Médio de Resposta (Latência):** ~1.5 a 3.0 segundos por requisição.
-* **Gestão de Custos / Cota:**Utilização da cota gratuita (Free Tier), monitorada com tratamento de exceção para limite de vazão (rate-limit exception handling) e mecanismo automático de fallback/contingência local.
+* Gestão de Custos / Cota:Utilização da cota gratuita (Free Tier), monitorada com tratamento de exceção para limite de vazão (rate-limit exception handling) e mecanismo automático de fallback/contingência local.
