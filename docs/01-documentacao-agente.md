@@ -3,7 +3,7 @@
 ## Caso de Uso
 
 ### Problema
-> Qual problema financeiro seu agente resolve?
+> Falta de orientação financeira personalizada e acessível para pessoas físicas que desejam organizar seus gastos mensais, entender seu histórico de transações e encontrar opções de investimentos alinhadas ao seu perfil de risco.
 
 [Sua descrição aqui]
 
