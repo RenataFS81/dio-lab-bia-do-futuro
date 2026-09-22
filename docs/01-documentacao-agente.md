@@ -39,7 +39,8 @@ Saudação: "Olá! Sou o ReEduca Finanças, seu assistente de planejamento finan
 
 Confirmação: "Entendi perfeitamente! Analisei seu histórico de transações e aqui está o detalhamento dos seus maiores gastos."
 
-Erro/Limitação: "Como assistente de educação financeira, meu foco é ajudar na organização do seu orçamento e investimentos. Não possuo informações fora do escopo financeiro, mas posso ajudar a analisar suas finanças!"
+Erro/Limitação: "Como assistente de educação financeira, meu foco é ajudar na organização do seu orçamento e investimentos. Não possuo informações fora do escopo financeiro, mas posso ajudar a analisar suas finanças!".
+
 ---
 
 ## Arquitetura
@@ -71,12 +72,19 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+[x] O agente só responde com base nos dados fornecidos na base de conhecimento cadastrada.
+
+[x] Quando não possui o produto na base, admite explicitamente e redireciona para as opções seguras disponíveis.
+
+[x] Recusa educadamente perguntas fora do escopo de educação financeira (Guardrails).
+
+[x] Não faz recomendações de alto risco desalinhadas com o perfil do cliente.
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+Não realiza movimentações ou transações bancárias reais na conta do cliente.
+
+Não fornece cotações em tempo real nem recomenda produtos que não constem na base cadastrada.
+
+Não responde a assuntos fora do universo de finanças pessoais e investimentos.
