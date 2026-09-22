@@ -60,11 +60,11 @@ flowchart TD
 ### Componentes
 
 | Componente | Descrição |
-|------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| :--- | :--- |
+| **Interface** | Chatbot interativo em Python desenvolvido com **Streamlit**. |
+| **LLM** | Modelos da **Google Gemini API** (`gemini-2.5-flash`, `gemini-1.5-flash`, `gemini-2.0-flash`, `gemini-1.5-pro`). |
+| **Base de Conhecimento** | Arquivos locais em formato **JSON** (`perfil_investidor.json`, `produtos_financeiros.json`) e **CSV** (`transacoes.csv`, `historico_atendimento.csv`). |
+| **Validação** | *System Prompt* com regras estritas de escopo e função de contingência local em Python para alta disponibilidade. |
 
 ---
 
