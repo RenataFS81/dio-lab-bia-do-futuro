@@ -92,26 +92,34 @@ DADOS DO CLIENTE E DO SISTEMA:
 {atendimentos_raw}
 
 DIRETRIZES:
-1. Responda com base nos dados do cliente acima.
+1. Responda detalhadamente e com passo a passo claro com base nos dados do cliente acima.
 2. Se o usuário perguntar por produtos não cadastrados (ex: Cripto, CDB Prefixado Bradesco, Ações), informe educadamente que o produto não consta na base cadastrada e recomende as opções de renda fixa disponíveis no perfil (ex: Tesouro Selic, CDB Liquidez Diária).
 3. Se a pergunta for fora de finanças, recuse educadamente e redirecione para educação financeira.
 """
 
 # ---------------------------------------------------------
-# 5. RESPOSTA DE CONTINGÊNCIA (Caso nenhuma API responda)
+# 5. RESPOSTA DE CONTINGÊNCIA ENRIQUECIDA (Caso a API falhe)
 # ---------------------------------------------------------
 def resposta_contingencia(pergunta):
     p = pergunta.lower()
-    if "cripto" in p or "bradesco" in p or "prefixado" in p or "quanto rende" in p:
+    
+    if "organizar" in p or "começar" in p or "passo a passo" in p or "investimento" in p:
+        return ("### 📌 Passo a Passo para Organizar suas Finanças e Começar a Investir:\n\n"
+                "1. **Mapeamento de Gastos:** Com base no seu histórico, seus maiores impactos atuais são o **Aluguel (R$ 1.200,00)** e **Supermercado (R$ 450,00)**. O primeiro passo é registrar todas as entradas e saídas.\n"
+                "2. **Reserva de Emergência:** Antes de buscar rentabilidade alta, monte um fundo cobrindo de 3 a 6 meses do seu custo de vida.\n"
+                "3. **Investimentos Recomendados (Perfil Moderado):**\n"
+                "   - **Tesouro Selic:** Ideal para reserva de emergência pela liquidez diária e total segurança.\n"
+                "   - **CDB Liquidez Diária (100% CDI):** Excelente opção para rentabilidade diária com garantia do FGC.\n"
+                "4. **Diversificação Gradual:** Após consolidar a reserva, você pode destinar uma parcela para opções de renda fixa de médio prazo.")
+    elif "cripto" in p or "bradesco" in p or "prefixado" in p or "quanto rende" in p:
         return ("Este produto específico não consta em nossa base de produtos cadastrados. "
-                "Para o perfil do cliente João (Moderado), recomendamos opções disponíveis de renda fixa segura, "
+                "Para o seu perfil (Moderado), recomendamos opções disponíveis de renda fixa segura, "
                 "como o **Tesouro Selic** ou **CDB Liquidez Diária** com rentabilidade atrelada ao CDI.")
     elif "gasto" in p or "transaç" in p or "tabela" in p:
         return ("Com base na tabela de transações registrada, os maiores gastos do cliente incluem o **Aluguel** (R$ 1.200,00) "
                 "e compras de **Supermercado** (R$ 450,00).")
     else:
-        return ("Como seu assistente de educação financeira, posso ajudar você a analisar seus gastos, organizar seu orçamento "
-                "e escolher os melhores produtos de investimento disponíveis para o seu perfil. Como posso ajudar com suas finanças hoje?")
+        return ("Como seu assistente de educação financeira, estou aqui para ajudar você a mapear seus gastos diários, organizar seu orçamento e escolher os melhores produtos de investimento para o seu perfil. Como posso detalhar sua dúvida agora?")
 
 # ---------------------------------------------------------
 # 6. INTERFACE E CHAT COM FALLBACK E CONTINGÊNCIA
@@ -135,11 +143,10 @@ if api_key:
             with st.spinner("Analisando dados financeiros..."):
                 texto_resposta = None
                 
-                # Lista de modelos em ordem de tentativa
+                # Nomes válidos e atualizados dos modelos oficiais do Gemini
                 modelos_fallback = [
-                    'gemini-2.5-flash',
-                    'gemini-1.5-flash',
                     'gemini-2.0-flash',
+                    'gemini-1.5-flash',
                     'gemini-1.5-pro'
                 ]
 
@@ -156,7 +163,7 @@ if api_key:
                     except Exception:
                         continue
 
-                # Se a API falhar em todos os modelos por cota, utiliza a contingência local
+                # Se todas as chamadas de API falharem, aciona a contingência enriquecida
                 if not texto_resposta:
                     texto_resposta = resposta_contingencia(entrada_usuario)
 
