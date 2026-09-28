@@ -9,6 +9,7 @@ O projeto foi criado para transformar o atendimento financeiro reativo em uma co
 Assista à apresentação de 3 minutos do agente em funcionamento na prática:
 
 👉 Clique aqui para assistir ao vídeo no YouTube
+https://youtu.be/2evBFyay0eI
 ---
 
 ### 🛠️ Ferramentas Utilizadas
